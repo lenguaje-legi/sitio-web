@@ -1,4 +1,34 @@
 <?php
+$texto = <<<STRING
+<h2>Textos</h2>
+<p>Un texto se declara encerrando al mismo entre dos acentos graves.</p>
+
+<p>Texto de una línea:</p>
+<pre class="bg-secondary">
+    <code>
+`Este es un texto`
+    </code>
+</pre>
+
+<p>Texto de múltiples líneas:</p>
+<pre class="bg-secondary">
+    <code>
+`
+    Este también es un texto,
+    pero este es de múltiples líneas.
+`
+    </code>
+</pre>
+
+<p>Texto interpolado:</p>
+<pre class="bg-secondary">
+    <code>
+nombre : `Alberto`
+imprimir(`Mi nombre es \$nombre`)
+    </code>
+</pre>
+STRING;
+
 $documento = <<<STRING
 <!doctype html>
 <html lang="es">
@@ -8,8 +38,9 @@ $documento = <<<STRING
         <title>Lenguaje Legi</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
-    <body>
+    <body data-bs-theme="dark">
         <h1>Lenguaje Legi</h1>
+        $texto
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>
